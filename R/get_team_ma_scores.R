@@ -30,3 +30,5 @@ get_team_ma_scores <- function(df, team, ma = c(10L, 30L)) {
     select(-FTHG, -FTAG) %>% 
     mutate(across(starts_with("Goal"), .fns = ll))
 }
+
+# df <- get_team_ma_scores(df = EPL, team = "Man United")

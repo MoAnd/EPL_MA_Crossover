@@ -23,3 +23,5 @@ create_crossover_plot <- function(df, metric, team) {
   
   plotly::ggplotly(p)
 }
+
+# create_crossover_plot(df = df, metric = "Goal_dif", team = "Man United")
