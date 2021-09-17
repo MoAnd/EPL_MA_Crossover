@@ -6,6 +6,7 @@ ui <- function(){
       title = "Moving Average Crossover",
       wellPanel(
         fluidRow(
+          useSever(),
           column(
             width = 3,
             selectInput(
@@ -20,8 +21,8 @@ ui <- function(){
             selectInput(
               "metric",
               label = "Select a metric",
-              choices = c("Goal", "Goal_against", "Goal_dif"),
-              selected = "Goal"
+              choices = c("Point", "Goal", "Goal_against", "Goal_dif"),
+              selected = "Point"
             )
           ),
           column(
@@ -31,7 +32,7 @@ ui <- function(){
               label = "Length of moving average #1",
               value = 10L,
               min = 2L,
-              max = 20L
+              max = 30L
             )
           ),
           column(
@@ -39,9 +40,9 @@ ui <- function(){
             numericInput(
               "ma2",
               label = "Length of moving average #2",
-              value = 30L,
+              value = 50L,
               min = 10L,
-              max = 50L
+              max = 100L
             )
           )
         )

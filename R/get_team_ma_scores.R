@@ -1,4 +1,4 @@
-get_team_ma_scores <- function(df, team, ma = c(10L, 30L)) {
+get_team_ma_scores <- function(df, team, ma = c(10L, 50L)) {
   #' Get Team Moving Average Scores
   #' 
   #' Function to filter out a given teams' scores and calculate 
@@ -25,10 +25,11 @@ get_team_ma_scores <- function(df, team, ma = c(10L, 30L)) {
     mutate(
       Goal = if_else(HomeTeam == team, FTHG, FTAG),
       Goal_against = if_else(HomeTeam == team, FTAG, FTHG),
-      Goal_dif = Goal - Goal_against
+      Goal_dif = Goal - Goal_against,
+      Point = if_else(HomeTeam == team, HomePoint, AwayPoint)
     ) %>% 
-    select(-FTHG, -FTAG) %>% 
-    mutate(across(starts_with("Goal"), .fns = ll))
+    select(-FTHG, -FTAG, -HomePoint, -AwayPoint) %>% 
+    mutate(across(starts_with(c("Goal", "Point")), .fns = ll))
 }
 
 # df <- get_team_ma_scores(df = EPL, team = "Man United")

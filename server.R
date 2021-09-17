@@ -12,4 +12,6 @@ server <- function(input, output, session){
     )
   )
   
+  sever(opacity = 0.85)
+  
 }
