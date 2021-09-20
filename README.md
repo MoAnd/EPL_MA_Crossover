@@ -8,8 +8,8 @@
 
 ## Overview
 
-The EPL\_MA\_Crossover repository hosts the code for my English Premier
-League Moving Average Crossover Shiny app.
+The ‘EPL\_MA\_Crossover’ repository hosts the code for my English
+Premier League Moving Average Crossover Shiny app.
 
 #### App Description
 

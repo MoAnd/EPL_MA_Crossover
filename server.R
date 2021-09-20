@@ -1,7 +1,11 @@
 server <- function(input, output, session){
   
   team_df <- reactive({
-    get_team_ma_scores(df = EPL, team = input$team, ma = c(input$ma1, input$ma2))
+    get_team_ma_scores(
+      df = EPL,
+      team = input$team,
+      ma = c(input$ma1, input$ma2)
+    )
   })
   
   output$crossover_plot <- renderPlotly(

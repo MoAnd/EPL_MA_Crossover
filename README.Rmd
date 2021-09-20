@@ -18,7 +18,7 @@ knitr::opts_chunk$set(
 
 ## Overview
 
-The EPL_MA_Crossover repository hosts the code for my English Premier League Moving Average Crossover Shiny app. 
+The 'EPL_MA_Crossover' repository hosts the code for my English Premier League Moving Average Crossover Shiny app. 
 
 
 #### App Description
